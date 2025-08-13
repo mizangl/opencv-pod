@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name          = 'OpenCVSimulator'
-    spec.version       = '2.4.13'
+    spec.version       = '2.4.13.1'
     spec.summary       = "OpenCV (Computer Vision) for iOS."
     spec.homepage      = "http://opencv.org"
     spec.description   = "OpenCV: open source computer vision library\n\n    Homepage: http://opencv.org\n    Online docs: http://docs.opencv.org\n    Q&A forum: http://answers.opencv.org\n    Dev zone: http://code.opencv.org"
