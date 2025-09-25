@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.authors       = "opencv.org"
     spec.source        = { 
       :http => "https://github.com/mizangl/opencv-pod/releases/download/2.4.13.11/Frameworks.zip", 
-      :sha256 => "6d0495a1db6090293bab40a526e941c94bac6af703cfac052a4efeea959c5ae1" 
+      :sha256 => "411ee9faa70b24b8e5f8f9b9cf99a719fa3922c0765a7340e64ec0eba20b6479" 
     }
     spec.swift_version = '5.0'
     spec.platform = :ios, '12.0'
