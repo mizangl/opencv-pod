@@ -1,0 +1,49 @@
+SET(HEADER_FILES
+    AnaUtils.h
+    anautils.pb.h
+    AutoEnhance.h
+    ChangeDetector.h
+    ColourBalancer.h
+    DepthMap.h
+    Firefly.h
+    FocusEvaluator.h
+    PolyData.h
+    Region.h
+    RegionAnalyser.h
+    RegionEvolution.h
+    ScaleDeterminator.h
+    SubjectiveLUT.h
+    WoundTunnelling.h
+    WoundUndermining.h
+    SmartTissueData.h
+    RegionPlotter.hpp
+)
+
+SET(SOURCE_FILES
+    AnaUtils.cpp
+    anautils.pb.cc
+    AutoEnhance.cpp
+    ChangeDetector.cpp
+    ColourBalancer.cpp
+    DepthMap.cpp
+    Firefly.cpp
+    FocusEvaluator.cpp
+    Region.cpp
+    RegionAnalyser.cpp
+    RegionEvolution.cpp
+    ScaleDeterminator.cpp
+    WoundTunnelling.cpp
+    WoundUndermining.cpp
+    SmartTissueData.cpp
+    RegionPlotter.cpp
+    )
+
+ADD_LIBRARY(swiftvision_analysis
+    ${HEADER_FILES}
+    ${SOURCE_FILES}
+)
+
+target_link_libraries(swiftvision_analysis
+    swiftvision_core
+    swiftvision_depth
+)
