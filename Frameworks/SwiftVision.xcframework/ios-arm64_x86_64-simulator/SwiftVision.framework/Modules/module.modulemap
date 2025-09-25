@@ -1,6 +1,0 @@
-framework module SwiftVision {
-  umbrella header "SwiftVision.h"
-  export *
-
-  module * { export * }
-}
