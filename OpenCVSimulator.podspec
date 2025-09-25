@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
     spec.swift_version = '5.0'
     spec.platform = :ios, '12.0'
     spec.ios.deployment_target = '12.0'
-    spec.frameworks = 'UIKit','Foundation','CoreGraphics','CoreImage','CoreVideo','Metal','SceneKit','Accelerate'
+    spec.frameworks = 'UIKit','Foundation','CoreGraphics','CoreImage','CoreVideo','Metal','SceneKit','Accelerate', 'AVFoundation', 'CoreMedia', 'QuartzCore'
     spec.libraries  = 'c++','z'
     spec.pod_target_xcconfig = {
       'OTHER_LDFLAGS' => '$(inherited) -all_load -Wl,-no_dead_strip_inits_and_terms'
