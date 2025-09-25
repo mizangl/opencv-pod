@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
     spec.swift_version = '5.0'
     spec.platform = :ios, '12.0'
     spec.ios.deployment_target = '12.0'
-    spec.frameworks = 'UIKit','Foundation','CoreGraphics','CoreImage','CoreVideo','Metal','SceneKit','Accelerate'
+    spec.frameworks = 'UIKit','Foundation','CoreGraphics','CoreImage','CoreVideo','Metal','SceneKit','Accelerate', 'AVFoundation', 'CoreMedia', 'QuartzCore'
     spec.libraries  = 'c++','z'
     # If the xcframework is static, force-load to prevent dead stripping:
     spec.pod_target_xcconfig = {
