@@ -16,10 +16,10 @@ Pod::Spec.new do |spec|
     spec.frameworks = 'UIKit','Foundation','CoreGraphics','CoreImage','CoreVideo','Metal','SceneKit','Accelerate', 'AVFoundation', 'CoreMedia', 'QuartzCore'
     spec.libraries  = 'c++','z'
     spec.pod_target_xcconfig = {
-      'OTHER_LDFLAGS' => '$(inherited) -all_load -Wl,-no_dead_strip_inits_and_terms'
+      'OTHER_LDFLAGS' => '$(inherited) -all_load -Wl,--dead_strip'
     }
     spec.user_target_xcconfig = {
-      'OTHER_LDFLAGS' => '$(inherited) -all_load -Wl,-no_dead_strip_inits_and_terms'
+      'OTHER_LDFLAGS' => '$(inherited) -all_load -Wl,--dead_strip'
     }
     spec.preserve_paths = 'Frameworks/opencv2.xcframework'
     spec.vendored_frameworks = "Frameworks/opencv2.xcframework"
