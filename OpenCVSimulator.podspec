@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.authors       = "opencv.org"
     spec.source        = { 
       :http => "https://github.com/mizangl/opencv-pod/releases/download/2.4.13.14/Frameworks.zip", 
-      :sha256 => "0ad1e626c516593150a292c0502f3a495aa470b94cadd60543ca2f943c4cb442" 
+      :sha256 => "9b5d45e869e7b32f397c650ca8c5dfa350cd1bb6bf544cb6dd472a89239cbd78" 
     }
     spec.swift_version = '5.0'
     spec.platform = :ios, '12.0'
@@ -18,5 +18,10 @@ Pod::Spec.new do |spec|
     spec.preserve_paths = 'Frameworks/opencv2.xcframework'
     spec.vendored_frameworks = "Frameworks/opencv2.xcframework"
     spec.requires_arc = false
-    spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-all_load' }
+    spec.pod_target_xcconfig = {
+      'OTHER_LDFLAGS' => '$(inherited) -all_load -Wl'
+    }
+    spec.user_target_xcconfig = {
+      'OTHER_LDFLAGS' => '$(inherited) -all_load -Wl'
+    }
   end
