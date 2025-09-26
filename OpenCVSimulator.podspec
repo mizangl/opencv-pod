@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name          = 'OpenCVSimulator'
-    spec.version       = '2.4.13.14'
+    spec.version       = '2.4.13.15'
     spec.summary       = "OpenCV (Computer Vision) 2.4.13 for iOS."
     spec.homepage      = "http://opencv.org"
     spec.description   = "OpenCV: open source computer vision library\n\n    Homepage: http://opencv.org\n    Online docs: http://docs.opencv.org\n    Q&A forum: http://answers.opencv.org\n    Dev zone: http://code.opencv.org"
@@ -13,15 +13,10 @@ Pod::Spec.new do |spec|
     spec.swift_version = '5.0'
     spec.platform = :ios, '12.0'
     spec.ios.deployment_target = '12.0'
-    spec.frameworks = 'UIKit','Foundation','CoreGraphics','CoreImage','CoreVideo','Metal','SceneKit','Accelerate', 'AVFoundation', 'CoreMedia', 'QuartzCore'
+    spec.frameworks = 'UIKit','Foundation','CoreGraphics','CoreImage','CoreVideo','Metal','SceneKit','Accelerate', 'AVFoundation', 'CoreMedia', 'QuartzCore', 'ImageIO'
     spec.libraries  = 'c++','z'
-    spec.pod_target_xcconfig = {
-      'OTHER_LDFLAGS' => '$(inherited) -all_load -Wl,--dead_strip'
-    }
-    spec.user_target_xcconfig = {
-      'OTHER_LDFLAGS' => '$(inherited) -all_load -Wl,--dead_strip'
-    }
     spec.preserve_paths = 'Frameworks/opencv2.xcframework'
     spec.vendored_frameworks = "Frameworks/opencv2.xcframework"
     spec.requires_arc = false
+    spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-all_load' }
   end
